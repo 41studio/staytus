@@ -18,7 +18,7 @@ gem 'rails_env_config', '~> 1'
 gem 'chronic_duration', '~> 0.10'
 gem 'datey', '~> 1.0'
 gem 'nifty-attachments'
-gem 'puma'
+# gem 'puma'
 gem 'moonrope', '~> 1.3'
 gem 'florrick', '~> 1.1'
 gem 'delayed_job_active_record'
@@ -31,4 +31,8 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'annotate', '~> 2.6.5'
   gem 'pry-rails'
+  gem 'capistrano',  '~> 3.1', require:false
+  gem 'capistrano-rails', '~> 1.1', require:false
+  gem 'capistrano-passenger', require:false
+  gem 'capistrano-bundler', '~> 1.1.2', require:false
 end
