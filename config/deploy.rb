@@ -42,9 +42,9 @@ namespace :deploy do
   task :upload_yml do
     on roles(:app) do
       execute "mkdir -p #{shared_path}/config"
-      upload! StringIO.new(File.read("config/secrets.yml.example")), "#{shared_path}/config/secrets.yml"
-      upload! StringIO.new(File.read("config/database.yml.example")), "#{shared_path}/config/database.yml"
-      upload! StringIO.new(File.read("config/environment.yml.example")), "#{shared_path}/config/environment.yml"
+      upload! StringIO.new(File.read("config/secrets.example.yml")), "#{shared_path}/config/secrets.yml"
+      upload! StringIO.new(File.read("config/database.example.yml")), "#{shared_path}/config/database.yml"
+      upload! StringIO.new(File.read("config/environment.example.yml")), "#{shared_path}/config/environment.yml"
     end
   end
 
